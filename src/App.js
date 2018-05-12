@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import { ListGroup, ListGroupItem } from 'react-bootstrap';
 import logo from './logo.svg';
 import './App.css';
 
 //const API = 'http://starlord.hackerearth.com/gamesext';
 const API = 'https://eltuworld.github.io/sapient-games-arena/data/gamesext.json';
 
-class GamesList extends React.Component {
+class GamesList extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -67,16 +66,16 @@ const sortDesc = (a, b) => parseInt(b.release_year) - parseInt(a.release_year);
         <form>
         <fieldset className="form-group">
         <input type="text" className="form-control form-control-lg" placeholder="Search" onChange={this.handleSearch}/>
-        <div class="btn-group">
-          <button type="button" class="btn btn-primary" onClick={this.handleSortScore}>Sort By score</button>
-          <button type="button" class="btn btn-primary" onClick={this.handleSortReleaseDate}>Sort By Release date</button>
+        <div className="btn-group">
+          <button type="button" className="btn btn-primary" onClick={this.handleSortScore}>Sort By score</button>
+          <button type="button" className="btn btn-primary" onClick={this.handleSortReleaseDate}>Sort By Release date</button>
         </div>
         </fieldset>
         </form>
         <ul className="list-group">
         {
           this.state.List.map(function(data) {
-            return <li className="list-group-item" data-category={data.title} ><span class="badge">Editors choice</span><h4 class="list-group-item-heading">{data.title}</h4><p>Genre : {data.genre} | Score : {data.score} | Released in {data.release_year}</p></li>
+            return <li className="list-group-item" data-category={data.title} ><span className="badge">Editors choice</span><h4 className="list-group-item-heading">{data.title}</h4><p>Genre : {data.genre} | Score : {data.score} | Released in {data.release_year}</p></li>
           })
          }
         </ul>

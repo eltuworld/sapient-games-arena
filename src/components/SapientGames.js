@@ -3,7 +3,7 @@ import GamesList from './GamesList.js';
 import Header from './Header.js';
 import '.././App.css';
 
-class SapientGames extends React.Component {
+class SapientGames extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -27,16 +27,16 @@ class SapientGames extends React.Component {
     })
   }
   handleSortScore = (event) => {
-  const sortAsc  = (a, b) => parseInt(a.score) - parseInt(b.score);
-  const sortDesc = (a, b) => parseInt(b.score) - parseInt(a.score);
+  const sortAsc  = (a, b) => parseInt(a.score, 10) - parseInt(b.score, 10);
+  const sortDesc = (a, b) => parseInt(b.score, 10) - parseInt(a.score, 10);
     this.setState({
        order: (this.state.order === 'asc' ? 'desc' : 'asc'),
        List : this.state.allList.sort(this.state.order === 'asc' ? sortDesc : sortAsc)
      })
   }
   handleSortReleaseDate = (event) => {
-  const sortAsc  = (a, b) => parseInt(a.release_year) - parseInt(b.release_year);
-  const sortDesc = (a, b) => parseInt(b.release_year) - parseInt(a.release_year);
+  const sortAsc  = (a, b) => parseInt(a.release_year, 10) - parseInt(b.release_year, 10);
+  const sortDesc = (a, b) => parseInt(b.release_year, 10) - parseInt(a.release_year, 10);
     this.setState({
        order: (this.state.order === 'asc' ? 'desc' : 'asc'),
        List : this.state.allList.sort(this.state.order === 'asc' ? sortDesc : sortAsc)
@@ -50,9 +50,9 @@ class SapientGames extends React.Component {
         <form>
         <fieldset className="form-group">
         <input type="text" className="form-control form-control-lg" placeholder="Search" onChange={this.handleSearch}/>
-        <div class="btn-group">
-          <button type="button" class="btn btn-primary" onClick={this.handleSortScore}>Sort By Score</button>
-          <button type="button" class="btn btn-primary" onClick={this.handleSortReleaseDate}>Sort By Release date</button>
+        <div className="btn-group">
+          <button type="button" className="btn btn-primary" onClick={this.handleSortScore}>Sort By Score</button>
+          <button type="button" className="btn btn-primary" onClick={this.handleSortReleaseDate}>Sort By Release date</button>
         </div>
         </fieldset>
         </form>
