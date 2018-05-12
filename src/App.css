@@ -1,0 +1,62 @@
+#root {
+  padding: 10px;
+  font-family: 'Avenir LT Std', sans-serif;
+}
+
+.form-control {
+  font-size: 2rem;
+  padding: 25px 15px;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+header[role="banner"] {
+  #logo-main {
+    display: block;
+    margin: 20px auto;
+  }
+}
+.btn-primary {
+    color: #fff;
+    background-color: #a94442;
+    border-color: #a50000;
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary:visited, .btn-primary:focus {
+    color: #fff;
+    background-color: #802d2c !important;
+    border-color: #88201e !important;
+}
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #f1f1f1;
+    border: 1px solid #a94442;
+}
