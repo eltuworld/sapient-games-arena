@@ -2,11 +2,12 @@ Output : https://eltuworld.github.io/sapient-games-arena/
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-Go to the directory and run 'npm install'
-
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm install`
+Installs the dependencies
 
 ### `npm start`
 
