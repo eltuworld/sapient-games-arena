@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import GamesList from './GamesList.js';
 import Header from './Header.js';
-import logo from '.././logo.svg';
 import '.././App.css';
 
 class SapientGames extends React.Component {
