@@ -3,6 +3,9 @@ import { ListGroup, ListGroupItem } from 'react-bootstrap';
 import logo from './logo.svg';
 import './App.css';
 
+//const API = 'http://starlord.hackerearth.com/gamesext';
+const API = 'https://eltuworld.github.io/sapient-games-arena/data/gamesext.json';
+
 class GamesList extends React.Component {
   constructor(props) {
     super(props);
@@ -15,7 +18,7 @@ class GamesList extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://starlord.hackerearth.com/gamesext")
+    fetch(API)
       .then(response => response.json())
       .then(data => this.setState({ allList: data,
         List : data
