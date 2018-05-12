@@ -3,6 +3,9 @@ import GamesList from './GamesList.js';
 import Header from './Header.js';
 import '.././App.css';
 
+//const API = 'http://starlord.hackerearth.com/gamesext';
+const API = 'https://eltuworld.github.io/sapient-games-arena/data/gamesext.json';
+
 class SapientGames extends Component {
   constructor(props) {
     super(props);
@@ -14,7 +17,7 @@ class SapientGames extends Component {
     };
   }
   componentDidMount() {
-    fetch("http://starlord.hackerearth.com/gamesext")
+    fetch(API)
       .then(response => response.json())
       .then(data => this.setState({ allList: data,
         List : data
